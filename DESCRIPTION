@@ -1,0 +1,17 @@
+Package: ARTtransfer
+Type: Package
+Title: Adaptive and Robust Pipeline for Transfer Learning
+Version: 1.0.1
+Date: 2024-09-18
+Author: Boxiang Wang, Yunan Wu, Chenglong Ye
+Maintainer: Boxiang Wang <boxiang-wang@uiowa.edu>
+Description: ART is a flexible framework for transfer learning that integrates information from auxiliary data sources to improve model performance on primary tasks. It is designed to be robust against negative transfer by including the non-transfer model in the candidate pool, ensuring stable performance even when auxiliary datasets are less informative. See the paper Wang et al (2023) at <https://doi.org/10.1002/sta4.582>.
+Imports: gbm, glmnet, nnet, randomForest, stats
+Encoding: UTF-8
+License: GPL-2
+VignetteBuilder: knitr
+Suggests: 
+    knitr,
+    rmarkdown
+Repository: CRAN
+RoxygenNote: 7.3.0

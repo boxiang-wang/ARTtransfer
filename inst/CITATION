@@ -1,0 +1,19 @@
+citHeader("Please cite the following paper when using the R package ARTtransfer:")
+
+bibentry(
+  bibtype = "Article",
+  title = "The art of transfer learning: An adaptive and robust pipeline",
+  author = c(
+    person(given = "Boxiang", family = "Wang"),
+    person(given = "Yunan", family = "Wu"),
+    person(given = "Chenglong", family = "Ye")
+  ),
+  journal = "Stat",
+  volume = "12",
+  number = "1",
+  pages = "e582",
+  year = "2023",
+  publisher = "Wiley Online Library",
+  doi = "10.1002/sta4.582",
+  url = "https://doi.org/10.1002/sta4.582"
+)
