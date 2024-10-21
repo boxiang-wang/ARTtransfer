@@ -6,12 +6,26 @@
 \alias{ARTtransfer}
 \title{ARTtransfer: Adaptive and Robust Transfer Learning for Enhanced Model Performance}
 \description{
-The ARTtransfer package implements an adaptive and robust transfer learning (ART) pipeline
-using various machine learning models. It integrates information from auxiliary datasets (source domains) 
-to enhance model performance on the primary task (target domain). The package is designed to be robust 
-against negative transfer, a phenomenon where auxiliary data can degrade the model’s performance.
-The ART framework is general and flexible. To further enhance model interpretability, the package provides variable importance metrics, 
-assessing the contribution of each variable in the final model.
+The ARTtransfer package implements the Adaptive and Robust Transfer Learning (ART) framework 
+introduced by Wang et al. (2023, DOI: 10.1002/sta4.582). This framework enhances model performance 
+on a primary task (target domain) by utilizing information from auxiliary datasets (source domains). 
+The package is specifically designed to prevent negative transfer, ensuring that auxiliary data 
+does not degrade model performance.
+}
+\details{
+ARTtransfer is a flexible and general framework that also includes variable importance metrics, 
+enabling users to evaluate the contribution of each variable to the final model and improve the 
+interpretability of results.
+
+The package includes implementations of common predictive models such as linear regression, 
+logistic regression, lasso and elastic net penalized regression (both linear and logistic), 
+random forest, gradient boosting machines, and neural networks. Users can also define and integrate 
+their own predictive models into the ART framework, based on the provided examples.
+
+In addition, the package implements a framework ART-I-AM that aggregates multiple machine learning 
+methods into the ART process. This is exemplified with implementations of random forests, AdaBoost, 
+and a basic neural network. Users can further expand the framework by incorporating 
+other predictive models of their choice.
 }
 \section{Functions}{
 
@@ -32,4 +46,14 @@ fit <- ART(dat$X, dat$y, dat$X_aux, dat$y_aux, dat$X_test, func=fit_lm, lam=1)
 For more details, see the documentation for individual functions.
 }
 
+\author{
+\strong{Maintainer}: Boxiang Wang \email{boxiang-wang@uiowa.edu}
+
+Authors:
+\itemize{
+  \item Yunan Wu
+  \item Chenglong Ye
+}
+
+}
 \keyword{internal}

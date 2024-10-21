@@ -90,7 +90,7 @@ If `is_noise = FALSE`, then no noisy data is generated and `K_noise` and `nk_noi
 noisy data is skipped regardless of the value of `is_noise`. The task can be either "regression" or "classification". 
 In classification mode, binary response variables are generated using a logistic function.
 
-If `nk` or `nk_noise` is a vector, it checks if its length matches the number of auxiliary or noisy datasets, respectively. 
+If `nk` or `nk_noise` is a vector, it checks if its length matches the number of auxiliary or noisy +, respectively. 
 If the lengths do not match, an error is returned.
 }
 \examples{
