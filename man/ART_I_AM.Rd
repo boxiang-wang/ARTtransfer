@@ -48,17 +48,3 @@ These models are applied to both the primary dataset and auxiliary datasets. The
 of each model using adaptive weights determined by the exponential weighting scheme. The aggregation improves the prediction
 power by considering different models and data simultaneously.
 }
-\examples{
-# Generate synthetic datasets for transfer learning
-dat <- generate_data(n0=50, K=2, nk=50, p=5, 
-                     mu_trgt=1, xi_aux=0.5, ro=0.3, err_sig=1, is_test=TRUE, task="classification")
-\dontrun{
-# Fit ART_I_AM aggregating three models (random forest, AdaBoost, and neural network)
-fit <- ART_I_AM(X = dat$X, y = dat$y, X_aux = dat$X_aux, y_aux = dat$y_aux, X_test = dat$X_test)
-
-# View the predictions and weights
-fit$pred_ART
-fit$W_ART
-}
-
-}
